@@ -10,10 +10,20 @@ Sure, let's break down each of the `ls` commands you've mentioned:
 
 4. **`ls -l`**: This command lists files and directories in a detailed, long format. It provides additional information about each file, such as permissions, owner, group, size, and modification time.
 5  **`ls -R`**: This command is used to print the directerios in recursive manner
+   
+# rm functionalities 
+1. rm filename
+2. rm -r directory
+3. rm -f filename
+4. rm -i filename
+5. rm *.txt
+6. rm -i *.txt
 
 
 
-Each of these options can be used individually or combined based on your specific requirements when using the `ls` command in a Unix-like shell.
+
+
+
 # cd functionalities 
 
 1. `cd ~`: This command changes the current directory to your home directory. The tilde (`~`) represents the home directory.
