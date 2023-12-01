@@ -1,39 +1,95 @@
-# OOPD_PROJECT_DEMO
-# ls functionalities 
-Sure, let's break down each of the `ls` commands you've mentioned:
+# MyShell Program
 
-1. **`ls -S`**: This command lists files and directories in the current directory, sorting them by size in descending order. The largest files or directories will appear first.
+## Introduction
 
-2. **`ls -h`**: This command lists files and directories in the current directory, making the sizes human-readable. This means file sizes will be displayed in a more easily understandable format, using units such as KB (kilobytes), MB (megabytes), GB (gigabytes), etc.
+MyShell is a simple command-line shell program written in C++. It provides basic functionalities for navigating the file system, managing files and directories, and executing commands. The shell supports commands such as changing directories (`cd`), listing directory contents (`ls`), removing files and directories (`rm`), moving files (`mv`), copying files and directories (`cp`), and displaying the current working directory (`pwd`).
 
-3. **`ls -t`**: This command lists files and directories in the current directory, sorting them by modification time with the newest files first. The `-t` flag stands for "time".
+## Features
 
-4. **`ls -l`**: This command lists files and directories in a detailed, long format. It provides additional information about each file, such as permissions, owner, group, size, and modification time.
-5  **`ls -R`**: This command is used to print the directerios in recursive manner
-   
-# rm functionalities 
-1. rm filename
-2. rm -r directory
-3. rm -f filename
-4. rm -i filename
-5. rm *.txt
-6. rm -i *.txt
+### Navigation Commands
 
+- `cd`: Change the current working directory.
+  - Usage: `cd <directory>`
+  - Additional Features:
+    - `cd ..`: Move to the parent directory.
+    - `cd -`: Move to the previous directory.
+    - `cd ~`: Move to the home directory.
+    - `cd help`: Display help for the `cd` command.
 
+### Listing Commands
 
+- `ls`: List the contents of a directory.
+  - Usage: `ls [options] [directory]`
+  - Options:
+    - `-S`: Sort by file size.
+    - `-h`: Display file sizes in a human-readable format.
+    - `-t`: Sort by modification time.
+    - `-l`: Display detailed information.
+    - `-R`: Recursively list subdirectories.
+  - Additional Features:
+    - `ls help`: Display help for the `ls` command.
 
+### Removal Commands
 
+- `rm`: Remove files or directories.
+  - Usage: `rm [options] <file/directory>`
+  - Options:
+    - `-i`: Interactive removal.
+    - `-r`: Recursively remove directories.
+  - Additional Features:
+    - `rm *.txt`: Remove files with a specific extension.
+    - `rm help`: Display help for the `rm` command.
 
-# cd functionalities 
+### Move Command
 
-1. `cd ~`: This command changes the current directory to your home directory. The tilde (`~`) represents the home directory.
+- `mv`: Move or rename files and directories.
+  - Usage: `mv <source> <destination>`
+  - Additional Features:
+    - `mv help`: Display help for the `mv` command.
 
-2. `cd ..`: This command moves up one level in the directory hierarchy. It's like going to the parent directory.
+### Copy Command
 
-3. `cd -`: This command switches to the previous directory you were in. It's a quick way to toggle between two directories.
+- `cp`: Copy files or directories.
+  - Usage: `cp [options] <source> <destination>`
+  - Options:
+    - `-r`: Recursively copy directories.
+  - Additional Features:
+    - `cp help`: Display help for the `cp` command.
 
-4. `cd [directory_path]`: This command changes the current directory to the one specified in `[directory_path]`. You replace `[directory_path]` with the actual path you want to navigate to.
+### Print Working Directory
 
-5. `ls`: This command lists the contents of the current directory.
+- `pwd`: Display the current working directory.
 
-So, if you put them together like `cd [directory_path] && ls`, it means change to the specified directory and then list its contents. The `&&` ensures that the second command (`ls`) will only run if the first one (`cd [directory_path]`) is successful.
+### Exit Command
+
+- `exit`: Exit the shell.
+
+## Getting Started
+
+To run the MyShell program, compile the source code and execute the generated executable.
+
+```bash
+g++ -o myshell myshell.cpp
+./myshell
+```
+
+## Usage
+
+Once the shell is running, enter commands at the prompt. Use the built-in commands or refer to the provided help messages for additional information.
+
+```bash
+$ cd /path/to/directory
+$ ls -l
+$ rm -r directory_name
+$ mv file.txt /new/location
+$ cp -r source_directory destination_directory
+$ pwd
+$ exit
+```
+
+## Notes
+
+- The program uses the C++ `<filesystem>` library for file and directory operations.
+- Some commands support additional options and features, which can be displayed using the `help` option.
+
+Feel free to explore and customize the MyShell program based on your requirements.
